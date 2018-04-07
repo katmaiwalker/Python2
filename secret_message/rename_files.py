@@ -14,4 +14,9 @@ def rename_files():
     for filename in file_list:
         os.rename("prank\\" + filename,"prank\\"+filename.translate(None, digits))
         #print(filename)
+
+    #(3)Another solution with the directory issue, we can change the location
+    # that our program is looking by using this: os.chdir(saved_path)
+    # so the program will look inside the prank folder which contain the photos.
+    # From my side i set prank file by hand in rename function.
 rename_files()
