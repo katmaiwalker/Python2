@@ -7,6 +7,9 @@ def rename_files():
     file_list = os.listdir(r"C:\Python27\MyProgramms\secret_message\prank")
     print(file_list)
 
+    saved_path = os.getcwd()
+    print("Current Working Directory is" + saved_path)
+
     #(2) For each file, rename filename
     for filename in file_list:
         os.rename("prank\\" + filename,"prank\\"+filename.translate(None, digits))
