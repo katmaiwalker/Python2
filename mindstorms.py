@@ -12,7 +12,11 @@ def draw_square():
     for x in range(0,4):
         brad.forward(100)      # move 100 steps forward
         brad.right(90)         # turn right 90 degrees
-    
+
+    angie = turtle.Turtle()
+    angie.shape("arrow")
+    angie.color("yellow")
+    angie.circle(100)
     window.exitonclick()
 
 draw_square()
