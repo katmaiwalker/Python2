@@ -8,7 +8,7 @@ auth_token  = "b78bd556bc82598ffedd7cae85925095"
 client = rest.Client(account_sid, auth_token)
 
 message = client.messages.create(
-    to="+306933127761", 
+    to="+xxx", 
     from_="+16267885784",
     body="My name is Musk!")
 
