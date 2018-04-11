@@ -9,6 +9,7 @@ def draw_shapes():
     draw_circle()
     draw_triangle()
     draw_circle_of_squares()
+    #draw_multiple_triangles()
     window.exitonclick()
 
 #Function that draws a simple square
@@ -26,6 +27,11 @@ def shape_square_sides(turtle_obj):
         turtle_obj.forward(100)      # move 100 steps forward
         turtle_obj.right(90)         # turn right 90 degrees
 
+def shape_triangle_sides(turtle_obj):
+    for x in range(0,3):
+        turtle_obj.forward(100) 
+        turtle_obj.left(120)
+
 #Draw a cirle
 def draw_circle():
     angie = turtle.Turtle()
@@ -39,10 +45,8 @@ def draw_triangle():
     joe.shape("triangle")
     joe.color("white")
     joe.speed(1)
-    for x in range(0,3):
-        joe.forward(100) 
-        joe.left(120)
-
+    shape_triangle_sides(joe)
+        
 #Draw multiples squares that have a common starting point.
 #As a final shape you will observe a circle .
 #Here there is a inner and outer loop.
@@ -53,6 +57,22 @@ def draw_circle_of_squares():
     for x in range (0,100):
         shape_square_sides(andrew)
         andrew.right(10)
-        
+
+#Check recursive solution        
+def draw_multiple_triangles(): 
+    jz = turtle.Turtle()
+    jz.shape("triangle")
+    jz.color("orange")
+    jz.speed(1)
+    for x in range(1,100):
+        for j in range(0,3):
+            jz.forward(100*x) 
+            jz.left(120)
+        jz.right(180)
+        for w in range(0,3):
+            jz.forward(100*x)
+            jz.right(120)
+        jz.right(180)
+            
 
 draw_shapes()
