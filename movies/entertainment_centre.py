@@ -25,4 +25,5 @@ blood_diamond = media.Movie("Blood Diamond",
 
 #movies = [toy_story,avatar,blood_diamond]
 #fresh_tomatoes.open_movies_page(movies)
-print(media.Movie.VALID_RATINGS)
+#print(media.Movie.VALID_RATINGS)
+print(media.Movie.__doc__)
